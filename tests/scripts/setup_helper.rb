@@ -4,9 +4,12 @@ SCRIPT_DIR = File.dirname(__FILE__)
 
 $stdout.sync = true
 
-def create_node(name, image='agent')
+def create_node(name, image='agent', sign_cert=true)
   puts "Creating #{name}..."
-  `puppet apply -e "dockeragent::node { '#{name}': ensure => present, image => '#{image}' }"`
+  `puppet apply -e "dockeragent::node { '#{name}': ensure => present, image => '#{image}', privileged => true }"`
+  if sign_cert
+    `puppet cert sign #{name}`
+  end
 end
 
 def clear_nodes

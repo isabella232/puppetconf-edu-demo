@@ -20,14 +20,16 @@ The block of you see is called a resource declaration—it's how Puppet sees the
 world. Resource declarations have a common syntax no matter what you want to
 manage and what operating system you're working on.
 
-    type { 'title':
-      parameter => 'value',
-    }
-      
-Your file resource only has one parameter value pair: `ensure => absent`. The
-`ensure` parameter expresses the basic state of the resource. In this case, the
-`absent` value means that the file specified by the resource title doesn't
-exist.
+```puppet
+type { 'title':
+  parameter => 'value',
+}
+```
+
+The file resource for `/var/www/html/hello_puppet.html` only has one parameter
+value pair: `ensure => absent`. The `ensure` parameter expresses the basic
+state of the resource. In this case, the `absent` value means that the file
+specified by the resource title doesn't exist.
 
 Continue on to the next task, and you'll see how to create this file by
 modifying the resource declaration.

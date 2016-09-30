@@ -12,10 +12,12 @@ Open a new file to write your resource declaration:
 Type `i` to enter insert mode, and write out your resource declaration. Feel
 free to replace the content with any message you like.
 
-    resource { '/var/www/html/quest/hello_puppet.html':
-      ensure  => file,
-      content => "Hello from Puppetconf!"
-    }
+```puppet
+file { '/var/www/html/hello_puppet.html':
+  ensure  => file,
+  content => "Hello from Puppetconf!"
+}
+```
 
 Now use the `puppet apply` command to tell puppet to apply your manifest.
 

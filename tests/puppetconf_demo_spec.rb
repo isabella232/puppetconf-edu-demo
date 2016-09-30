@@ -1,5 +1,4 @@
 # What's in a resource?
-
 describe "Task 1:" do
   it 'Inspect the /var/www/html/hello_puppet.html file' do
     file('/root/.bash_history')
@@ -18,16 +17,27 @@ end
 
 # Manifest reality
 describe "Task 3:" do
-  it 'Create the hello_puppet.pp manifest' do
-    file('/root/hello_puppet.pp')
-      .should match /resource\s*{\s*\'\/var\/www\/html\/quest\/hello_puppet\.html\':\s+ensure\s*=>\s*file,\s+content\s*=>\s*\"\w+"\s+}/
+  it 'Create and apply the hello_puppet.pp manifest' do
+    file('/var/www/html/hello_puppet.html')
+      .content
+      .should match /Hello from.*Puppetconf!/
   end
 end
 
+# Keep it classy
 describe "Task 4:" do
-  it 'Give the galatea user the comment Galatea of Cyprus' do
-    file('/root/.bash_history')
+  it 'Create a module and class to wrap your file resource' do
+    file('/etc/puppetlabs/code/environments/production/modules/hello/manifests/init.pp')
       .content
-      .should match /puppet\\s\s\s\s\s\s\s\s\s\s++apply\s+hello_puppet\.pp/
+      .should match /class\s+hello\s+{\s+file\s+\{\s+\'\/var\/www\/html\/hello_puppet\.html':\s+ensure\s*=>\s*file,\s+content\s*=>\s*"Hello from a class I wrote at Puppetconf!",?\s+}\s+}/
+  end
+end
+
+# Test your code
+describe "Task 4:" do
+  it 'Create and apply the hello_puppet.pp manifest' do
+    file('/var/www/html/hello_puppet.html')
+      .content
+      .should match /Hello from a class I wrote at Puppetconf!/
   end
 end

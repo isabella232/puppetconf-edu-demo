@@ -1,3 +1,5 @@
 {
-  "puppetconf_demo": {}
+  "puppetconf_demo": {
+    "setup_command": "ruby /usr/src/puppetconf-edu-demo/tests/scripts/demo.rb"
+  }
 }

@@ -17,13 +17,16 @@
 /* For pinning terminal to the side of the window */
 .book {
   float: left;
-  width: 60%;
+  width: 50%;
 }
 
 .terminal_wrapper {
   float: right;
-  width: 40%;
+  width: 50%;
   height: 100%;
+  padding: 10px;
+  background: black;
+  overflow: hidden;
 }
 
 .terminal_wrapper iframe {

@@ -12,7 +12,7 @@ time, pass in the `-e` flag to tell the tool you want to edit the resource
     puppet resource file /var/www/html/hello_puppet.html -e
 
 In the text editor, type `i` to enter insert mode and change the value of the
-`ensure` parameter from `absent` to `present`. Type `:wq` to save and exit the
+`ensure` parameter from `absent` to `file`. Type `:wq` to save and exit the
 editor.
 
 You told Puppet that that file should exist. When Puppet saw that it wasn't

@@ -9,7 +9,7 @@ To make things easy, we've set up a node called `webserver-test` with the
 Puppet agent already installed. Puppet uses a special manifest called `site.pp`
 to assign classes to nodes.
 
-    vim /etc/puppetlabs/code/environments/production/manifests/init.pp
+    vim /etc/puppetlabs/code/environments/production/manifests/site.pp
 
 Create a new node declaration for the `webserver-test` node, and include your
 `hello` class.

@@ -1,3 +1,3 @@
-dockeragent::node { ['hello', 'webserver', 'webserver-dev']:
+dockeragent::node { 'webserver':
   ensure => absent,
 }

@@ -27,7 +27,7 @@ This time, put your file resource inside a class
 called `hello`.
 
     class hello {
-      file { '/var/www/html/hello_puppet.html':
+      file { '/var/www/quest/hello_puppet.html':
         ensure  => file,
         content => "Hello from a class I wrote at Puppetconf!"
       }

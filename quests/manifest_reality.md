@@ -13,7 +13,7 @@ Type `i` to enter insert mode, and write out your resource declaration. Feel
 free to replace the content with any message you like.
 
 ```puppet
-file { '/var/www/html/hello_puppet.html':
+file { '/var/www/quest/hello_puppet.html':
   ensure  => file,
   content => "Hello from Puppetconf!"
 }

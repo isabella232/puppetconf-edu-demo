@@ -14,7 +14,7 @@ now.
 Create the module's structure. You need a directory with the same name as the
 module and a manifests directory where you'll keep your manifests.
 
-    mkdir -p hello/manifests
+    mkdir -p hello/{manifests,examples}
 
 A module's main manifest (the one with a class that shares the module's name)
 always has the special name `init.pp`.
@@ -23,13 +23,19 @@ Create an `init.pp` manifest.
 
     vim hello/manifests/init.pp
 
-This time, put your file resource inside a class
-called `hello`.
+This time, put your file resource inside a class called `hello`. One more thing:
+the `/var/www/quest` directory already exists on this system, but if you
+want to apply our module somewhere else, you need to define a resource for
+that directory structure as well. We'll use an array in the resource title
+as a shorthand for defining two different resources with the same parameters.
 
     class hello {
-      file { '/var/www/html/quest/hello_puppet.html':
+      file { '/var/www/quest/hello_puppet.html':
         ensure  => file,
         content => "Hello from a class I wrote at Puppetconf!"
+      }
+      file { ['/var/www', '/var/www/quest']:
+        ensure => directory,
       }
     }
 

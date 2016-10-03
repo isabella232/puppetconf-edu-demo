@@ -19,6 +19,7 @@ def reset_tasks
   `rm /var/www/html/hello_puppet.html`
   `rm /root/.bash_history`
   `rm -rf /etc/puppetlabs/code/environments/production/modules/hello`
+  `cp #{File.join(SCRIPT_DIR, 'site.pp')} /etc/puppetlabs/code/environments/production/manifests/site.pp`
 end
 
 def clear_nodes

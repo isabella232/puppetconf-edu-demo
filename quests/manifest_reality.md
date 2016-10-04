@@ -7,23 +7,25 @@ organize your resource declarations.
 
 Open a new file to write your resource declaration:
 
-    vim hello_puppet.pp
+    vim /tmp/hello_puppet.pp
 
 Type `i` to enter insert mode, and write out your resource declaration. Feel
 free to replace the content with any message you like.
 
 ```puppet
-file { '/var/www/quest/hello_puppet.html':
+file { '/tmp/hello_puppet.txt':
   ensure  => file,
-  content => "Hello from Puppetconf!"
+  content => "Hello from Puppetconf!\n"
 }
 ```
 
 Now use the `puppet apply` command to tell puppet to apply your manifest.
 
-    puppet apply hello_puppet.pp
+    puppet apply tmp/hello_puppet.pp
 
-Check out your new page!
+Now take a look at your file:
 
-Throwing resources into a manifest doesn't scale well. In the next quest, we'll
-show you how to keep your code organized with classes.
+    cat /tmp/hello_puppet.txt
+
+In the next quest, we'll show you how to organize your code with classes
+and modules.

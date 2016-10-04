@@ -38,3 +38,15 @@ class hello {
   }
 }
 ```
+
+Now connect to your webserver. (Remember, the password is "puppet")
+
+    ssh root@webserver.puppet.vm
+
+Trigger a puppet agent run
+
+    puppet agent -t
+
+And check out your hosted file!
+
+    curl localhost/hello_puppet.txt

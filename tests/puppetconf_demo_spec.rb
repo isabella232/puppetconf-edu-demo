@@ -32,7 +32,7 @@ describe "Task 4:", host: :localhost do
       .should match /class\s+hello\s+{/
     file('/etc/puppetlabs/code/environments/production/modules/hello/manifests/init.pp')
       .content
-      .should match /file\s+\{\s*\'\/tmp\/hello_puppet\.txt':\s+ensure\s*=>\s*file,\s+content\s*=>\s*"Hello from a class I wrote at Puppetconf!",?\s+\}/
+      .should match /file\s+\{\s*\'\/.*\/hello_puppet\.txt':\s+ensure\s*=>\s*file,\s+content\s*=>\s*"Hello from a class I wrote at Puppetconf!\\n",?\s+\}/
   end
 end
 
@@ -47,12 +47,18 @@ end
 
 # Classify
 describe "Task 6:", host: :webserver do
-  it 'Use the Nginx module to set up a server' do
-    file('/etc/puppetlabs/code/environments/production/modules/hello/manifests/init.pp')
+  it 'Apply the hello class to your webserver node' do
+    file('/tmp/hello_puppet.txt')
       .content
-      .should match /include 'nginx'/
-    file('/etc/puppetlabs/code/environments/production/modules/hello/manifests/init.pp')
-      .content
-      .should match /nginx::resource::vhost\s+'_':\s+www_root\s*=>\s*d'\/var\/www\/quest',?\w+}/
+      .should match /Hello from.*Puppetconf!/
+  end
+end
+
+# Serve it up
+describe "Task 7:", host: :localhost do
+  it 'Add an nginx server to your hello class' do
+    command('curl webserver.puppet.vm/hello_puppet.txt')
+      .stdout
+      .should match /Hello/
   end
 end

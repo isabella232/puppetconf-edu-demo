@@ -21,7 +21,7 @@ file { '/tmp/hello_puppet.txt':
 
 Now use the `puppet apply` command to tell puppet to apply your manifest.
 
-    puppet apply tmp/hello_puppet.pp
+    puppet apply /tmp/hello_puppet.pp
 
 Now take a look at your file:
 

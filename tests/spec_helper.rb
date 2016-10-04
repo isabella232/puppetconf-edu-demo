@@ -12,7 +12,7 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = [:should, :expect]
   end
-  config.before(:example, :host => :hello) do
+  config.before(:example, :host => :webserver) do
     set :backend, 'ssh'
     set :host, 'webserver.puppet.vm'
     options = {password: 'puppet', user: 'root'}

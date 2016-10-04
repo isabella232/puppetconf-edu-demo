@@ -17,6 +17,7 @@ end
 
 def reset_tasks
   `rm /tmp/hello_puppet.txt`
+  `rm /tmp/hello_puppet.pp`
   `rm /root/.bash_history`
   `rm -rf /etc/puppetlabs/code/environments/production/modules/hello`
   `cp #{File.join(SCRIPT_DIR, 'site.pp')} /etc/puppetlabs/code/environments/production/manifests/site.pp`

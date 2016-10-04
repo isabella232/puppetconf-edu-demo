@@ -23,7 +23,7 @@ node 'webserver.puppet.vm' {
 By default, the Puppet agent runs every 30 minutes to check in with the Puppet
 master and apply any changes it needs to stay in line with the state you've
 defined for it. To speed things up and see Puppet do it's work, connect to the
-`webserver.puppet.vm`.
+`webserver.puppet.vm` with the password `puppet`.
 
     ssh root@webserver.puppet.vm
 

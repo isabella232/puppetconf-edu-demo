@@ -17,7 +17,9 @@ Create a test manifest for `init.pp` in your `hello/examples` directory.
 
 Use the 'include' syntax to tell Puppet you want to apply your `hello` class.
 
-    include hello    
+```puppet
+include hello
+```
 
 Use `puppet apply` to run your test.
 

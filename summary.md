@@ -8,4 +8,4 @@
 * [Keep it classy](quests/keep_it_classy.md)
 * [Test your code](quests/test_your_code.md)
 * [Classify](quests/classify.md)
-* [Reuse](quests/reuse.md)
+* [Serve it up](quests/serve_it_up.md)

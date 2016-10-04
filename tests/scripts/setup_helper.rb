@@ -16,7 +16,7 @@ def create_node(name, image='agent', sign_cert=true, run_puppet=true)
 end
 
 def reset_tasks
-  `rm /var/www/html/hello_puppet.html`
+  `rm /tmp/hello_puppet.txt`
   `rm /root/.bash_history`
   `rm -rf /etc/puppetlabs/code/environments/production/modules/hello`
   `cp #{File.join(SCRIPT_DIR, 'site.pp')} /etc/puppetlabs/code/environments/production/manifests/site.pp`

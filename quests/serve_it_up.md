@@ -23,7 +23,7 @@ class hello {
 
   # Use _ as a catch-all vhost name
   nginx::resource::vhost { '_':
-    www_root => '/var/www/quest',
+    www_root => '/var/www',
   }
 
   file { '/var/www':

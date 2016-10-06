@@ -152,3 +152,19 @@ a.gitbook-link {
 .book.with-summary .book-body {
     left: 240px;
 }
+
+.navigation {
+  position: static;
+  top: auto;
+  max-width: 50%;
+  width: 50%;
+  display: inline-block;
+}
+
+.navigation.navigation-next {
+  float: right;
+}
+
+.book-body .body-inner {
+  position: static;
+}

@@ -4,8 +4,6 @@ Puppet can translate just about anything on your system into the resource
 syntax. It can also apply the state described by the resource syntax back
 onto the system you want to manage.
 
-## Enforce your changes
-
 Use the `puppet resource` tool to take another look at that file resource. This
 time, pass in the `-e` flag to tell the tool you want to edit the resource
 

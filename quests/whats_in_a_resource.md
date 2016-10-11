@@ -5,12 +5,6 @@ as a resource. Puppet has built-in resource types to cover most aspects of a
 system an administrator might care about. Some of the most common resource
 types are `file`, `package`, `user`, and `service`.
 
-Puppet modules allow you to write your own resource types or use those already
-created by the community. You can use custom resources to manage more complex
-and specific systems like a postgres database or an Apache virtual host.
-
-## Resource syntax
-
 Use the `puppet resource` tool to look at a `file` resource on your system. In
 the terminal to the right, enter the following command:
 

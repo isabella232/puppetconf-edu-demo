@@ -42,7 +42,7 @@
 }
 
 .markdown-section p {
-  line-height: 1.5;  
+  line-height: 1.2;  
 }
 
 .markdown-section h1,
@@ -70,7 +70,7 @@
 
 .markdown-section pre {
   border-left: 5px solid #ccc;
-  line-height: 1.375;
+  line-height: .9em;
   background: #f7f7f7;
 }
 
@@ -154,15 +154,32 @@ a.gitbook-link {
 }
 
 .navigation {
-  position: static;
+  position: absolute;
   top: auto;
   max-width: 50%;
   width: 50%;
   display: inline-block;
+  font-family: Calibre Web Regular;
+  background-color: #ffad1a;
+  color: white;
+  font-size: 2em;
+}
+
+.navigation:hover {
+  background-color: #fec847;
+  color: white;
 }
 
 .navigation.navigation-next {
   float: right;
+}
+
+.navigation.navigation-next:before {
+  content: "next";
+}
+
+.navigation.navigation-prev:after {
+  content: "back";
 }
 
 .book-body .body-inner {

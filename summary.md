@@ -9,3 +9,4 @@
 * [Test your code](quests/test_your_code.md)
 * [Classify](quests/classify.md)
 * [Serve it up](quests/serve_it_up.md)
+* [Next steps](quests/next_steps.md)

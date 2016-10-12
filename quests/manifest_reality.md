@@ -3,14 +3,11 @@
 If you want a consistent way to manage your system, you need to save and
 organize your resource declarations.
 
-## Infrastructure as code
-
 Open a new file to write your resource declaration:
 
     vim /tmp/hello_puppet.pp
 
-Type `i` to enter insert mode, and write out your resource declaration. Feel
-free to replace the content with any message you like.
+Type `i` to enter insert mode, and write out your resource declaration.
 
 ```puppet
 file { '/tmp/hello_puppet.txt':
@@ -18,6 +15,8 @@ file { '/tmp/hello_puppet.txt':
   content => "Hello from Puppetconf!\n"
 }
 ```
+
+When you're finished, type `ESC`, then `:wq` to write your changes and exit.
 
 Now use the `puppet apply` command to tell puppet to apply your manifest.
 

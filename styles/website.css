@@ -171,7 +171,10 @@ a.gitbook-link {
 }
 
 .navigation.navigation-next {
-  float: right;
+  left: 25%;
+}
+.navigation.navigation-next {
+  left: 0;
 }
 
 .navigation.navigation-next:before {

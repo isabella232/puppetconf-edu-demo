@@ -55,6 +55,7 @@
 
 .markdown-section h1 {
   margin-top: 0em;
+  margint-bottom: 20px;
   font-size: 3.2em;
   border-bottom: 1px solid lightgrey;
 }
@@ -154,10 +155,10 @@ a.gitbook-link {
 }
 
 .navigation {
-  position: absolute;
+  position: fixed;
   top: auto;
-  max-width: 50%;
-  width: 50%;
+  max-width: 25%;
+  width: 25%;
   display: inline-block;
   font-family: Calibre Web Regular;
   background-color: #ffad1a;
@@ -171,7 +172,7 @@ a.gitbook-link {
 }
 
 .navigation.navigation-next {
-  float: right;
+  left: 25%;
 }
 
 .navigation.navigation-next:before {
@@ -184,4 +185,8 @@ a.gitbook-link {
 
 .book-body .body-inner {
   position: static;
+}
+
+.page-inner {
+  padding-top: 0;
 }

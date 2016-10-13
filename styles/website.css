@@ -154,10 +154,10 @@ a.gitbook-link {
 }
 
 .navigation {
-  position: absolute;
+  position: fixed;
   top: auto;
-  max-width: 50%;
-  width: 50%;
+  max-width: 25%;
+  width: 25%;
   display: inline-block;
   font-family: Calibre Web Regular;
   background-color: #ffad1a;

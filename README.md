@@ -1,3 +1,3 @@
-# Puppet in 10 minutes
+# Learn Puppet
 
 ## Click *next* to get started

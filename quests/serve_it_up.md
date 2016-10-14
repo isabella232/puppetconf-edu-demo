@@ -32,7 +32,7 @@ class hello {
 
   file { '/var/www/hello_puppet.txt':
     ensure  => file,
-    content => "Hello from a class I wrote at Puppetconf!"
+    content => "Hello from a class I wrote at Puppetconf!\n"
   }
 }
 ```
